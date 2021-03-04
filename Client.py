@@ -3,7 +3,7 @@ import socket
 import threading
 nickname =input("ENTER NICKNAME")
 client = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
-ip = '127.0.0.1'
+ip = socket.gethostname()
 port = 55555
 client.connect((ip, port))
 def recieve():
